@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>My Dr.🕷️🩺</title>
+<style>
+:root{--bg1:#fde2e8;--bg2:#f7c6d4;--ink:#5a1a33;--soft:#8a3c5a;--heart:#e8486f;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg1:#2a0f1c;--bg2:#4a1730;--ink:#ffe6ee;--soft:#f3b3c6;--heart:#ff6b8f}}
+:root[data-theme="dark"]{--bg1:#2a0f1c;--bg2:#4a1730;--ink:#ffe6ee;--soft:#f3b3c6;--heart:#ff6b8f}
+html,body{height:100%;margin:0}
+body{background:linear-gradient(160deg,var(--bg1),var(--bg2),var(--bg1));background-size:300% 300%;color:var(--ink);font-family:Georgia,"Times New Roman",serif;overflow:hidden;position:relative;-webkit-tap-highlight-color:transparent}
+@keyframes bg{0%,100%{background-position:0 0}50%{background-position:100% 100%}}
+#stage{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:80px 26px 160px;text-align:center;cursor:pointer}
+#text{max-width:560px;font-size:clamp(21px,5.2vw,32px);line-height:1.55;opacity:0;transform:translateY(14px);transition:opacity 1.2s ease,transform 1.2s ease}
+#text.on{opacity:1;transform:none}
+#text.big{font-size:clamp(30px,8vw,48px);color:var(--heart)}
+#bar{position:absolute;left:0;top:env(safe-area-inset-top,0px);height:3px;background:var(--heart);width:0;transition:width .6s}
+#ctl{position:absolute;bottom:calc(18px + env(safe-area-inset-bottom,0px));left:0;right:0;text-align:center;font-size:13px;color:var(--soft);font-family:system-ui,sans-serif}
+button{font:inherit;color:var(--ink);background:transparent;border:1px solid var(--soft);border-radius:20px;padding:6px 16px;margin:0 4px}
+.h{position:absolute;bottom:-40px;color:var(--heart);opacity:.5;animation:up linear forwards;pointer-events:none}
+@keyframes up{to{transform:translateY(-110vh) rotate(20deg);opacity:0}}
+.sp{position:absolute;top:0;transform-origin:top center;animation:sw var(--d,5s) ease-in-out infinite alternate;pointer-events:none;z-index:1}.sp i{display:block;width:2px;height:var(--l,90px);background:var(--soft);margin:0 auto;opacity:.6}@keyframes sw{from{transform:rotate(-7deg)}to{transform:rotate(7deg)}}
+#lem{position:absolute;left:10px;bottom:calc(56px + env(safe-area-inset-bottom,0px));pointer-events:none;display:flex;align-items:flex-end;gap:6px;z-index:2;animation:bob 2.2s ease-in-out infinite alternate}@keyframes bob{to{transform:translateY(-6px)}}
+#bub{max-width:175px;background:#fffbe0;color:#4a3d00;border:2px solid #b8a21a;border-radius:14px;padding:8px 10px;font:14px/1.35 system-ui,sans-serif;opacity:0;transition:opacity .5s}#bub.on{opacity:1}
+.mo{transform-box:fill-box;transform-origin:center;animation:talk .3s infinite alternate}@keyframes talk{to{transform:scaleY(.35)}}
+#tg{position:absolute;top:calc(10px + env(safe-area-inset-top,0px));right:10px;z-index:3}#tg button{font-size:13px;padding:4px 12px;background:var(--bg1)}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+<svg width="0" height="0" style="position:absolute"><defs><symbol id="spd" viewBox="0 0 60 50"><path d="M22 26L8 14L3 22M22 30L6 30L2 40M24 34L10 46M38 26L52 14L57 22M38 30L54 30L58 40M36 34L50 46" stroke="#2b1b2e" stroke-width="3" stroke-linecap="round" fill="none"/><circle cx="30" cy="30" r="13" fill="#4a2c5a"/><circle cx="30" cy="17" r="9" fill="#4a2c5a"/><circle cx="26" cy="15" r="3" fill="#fff"/><circle cx="34" cy="15" r="3" fill="#fff"/><circle cx="26.5" cy="15.5" r="1.3" fill="#000"/><circle cx="34.5" cy="15.5" r="1.3" fill="#000"/><path d="M26 21Q30 25 34 21" stroke="#ff9ab5" stroke-width="2" fill="none"/></symbol></defs></svg>
+<div class="sp" style="left:6%;--d:4.5s;--l:70px"><i></i><svg width="46" height="38"><use href="#spd"/></svg></div>
+<div class="sp" style="left:30%;--d:6s;--l:130px"><i></i><svg width="38" height="32"><use href="#spd"/></svg></div>
+<div class="sp" style="left:58%;--d:5s;--l:90px"><i></i><svg width="50" height="42"><use href="#spd"/></svg></div>
+<div class="sp" style="left:84%;--d:5.5s;--l:150px"><i></i><svg width="42" height="35"><use href="#spd"/></svg></div>
+<div id="lem"><svg width="86" height="110" viewBox="0 0 86 110"><ellipse cx="43" cy="62" rx="34" ry="42" fill="#f6e24a" stroke="#b8a21a" stroke-width="3"/><path d="M43 16Q50 6 58 10Q50 16 43 20Z" fill="#6aa84f"/><circle cx="31" cy="52" r="8" fill="#fff"/><circle cx="55" cy="52" r="8" fill="#fff"/><circle cx="33" cy="54" r="3.5" fill="#222"/><circle cx="53" cy="54" r="3.5" fill="#222"/><path d="M22 42L38 47M64 42L48 47" stroke="#6b5a00" stroke-width="3" stroke-linecap="round"/><ellipse class="mo" cx="43" cy="80" rx="13" ry="9" fill="#7a1f2e"/></svg><div id="bub"></div></div>
+<div id="tg"><button id="lg">عربي</button><button id="mu">♪ Music: off</button></div>
+<div id="stage"><div id="text"></div></div>
+<div id="ctl"><span id="hint">Tap to start ❤️</span></div>
+<script>
+var S=[
+["My beautiful doctor ❤️",1],
+["There is something I want you to know, something I probably don’t tell you enough: I am so incredibly proud of you, more than you could ever imagine."],
+["I am proud of every step you take, even the little ones that nobody notices but you."],
+["I see someone truly extraordinary in you. Not just your beauty, but your mind, your heart, your ambition, and the beautiful soul behind it all."],
+["I know studying isn’t easy. I know there are days when everything feels overwhelming, and the exams make you question whether you can manage it all."],
+["But please, don’t let one difficult moment make you doubt your abilities. Don’t let the fear of how far you still have to go make you forget how far you’ve already come."],
+["You’re not studying just to pass an exam. You’re building your future, getting closer every single day to a dream that deserves every bit of your effort."],
+["One day, you’ll wear that white coat, people will call you Doctor, and you’ll realize that none of it was in vain."],
+["Thank you for existing, for your kindness, for the way you speak. Your smile, your laugh, your spontaneity, even the way you worry and overthink. You’re beautiful in ways that go far beyond your appearance."],
+["I’m here to remind you of your strength when things get difficult, to believe in you even when you struggle to believe in yourself."],
+["Be human. Get tired, take a break, cry if you need to, and then try again. Just please, never give up on your dream."],
+["I hope the day comes when I see you, with that beautiful smile, saying: “I DID IT.”",1],
+["I love your beauty, but even more, I love the person behind it. I admire your ambition, respect your intelligence, and feel grateful to have you in my life."],
+["You might see a student struggling to keep up, but I see a future doctor on her way to becoming everything she has ever dreamed of."],
+["I love you. May God reward every bit of your exhaustion with happiness greater than anything you’ve ever imagined. ❤️",1]
+];
+var L=["Ahem! A very important letter is about to begin!","Proud of her? Obviously! Who wouldn’t be?!","Even tiny steps count. Tiny like these spiders!","Extraordinary! I said it before you did!","Studying is hard. Have some lemonade.","You’ve come far. Very, VERY far!","A dream deserves effort. And snacks.","A white coat! Please keep it spotless!","Smile, laugh, overthink… all excellent!","He believes in you. So do I. So do the spiders.","Cry, rest, retry. Rules of the lemon!","Say it loud: I DID IT!","Love beats exams. Mostly.","A future doctor! Make way!","Congratulations in advance, Doctor! 🍋"],bub=document.getElementById('bub');
+L=["أحم! رسالة مهمة جداً على وشك أن تبدأ!","فخور بها؟ طبعاً! ومن لا يكون؟!","حتى الخطوات الصغيرة تُحسب. صغيرة مثل هذه العناكب!","استثنائية! قلتها قبلك!","الدراسة صعبة. تفضّلي بعض عصير الليمون.","لقد قطعتِ مسافة طويلة. طويلة جداً جداً!","الحلم يستحق الجهد. والوجبات الخفيفة.","معطف أبيض! أرجو أن تحافظي على نظافته!","ابتسامة وضحكة وتفكير زائد… كلها رائعة!","هو يؤمن بكِ. وأنا كذلك. والعناكب أيضاً.","ابكي، استريحي، حاولي من جديد. قوانين الليمون!","قوليها بصوت عالٍ: لقد فعلتها!","الحب يغلب الامتحانات. تقريباً.","طبيبة المستقبل! أفسحوا الطريق!","مبروك مقدماً يا دكتورة! 🍋"];bub.dir='rtl';
+var SA=["طبيبتي الجميلة ❤️","هناك شيء أريدكِ أن تعرفيه، شيء ربما لا أقوله لكِ كثيراً: أنا فخور بكِ جداً، أكثر مما تتخيلين.","أنا فخور بكل خطوة تخطينها، حتى الصغيرة منها التي لا يلاحظها أحد غيركِ.","أرى فيكِ إنسانة استثنائية حقاً. ليس لجمالكِ فقط، بل لعقلكِ وقلبكِ وطموحكِ والروح الجميلة التي تقف خلف كل ذلك.","أعلم أن الدراسة ليست سهلة. هناك أيام يبدو فيها كل شيء ثقيلاً، وتجعلكِ الامتحانات تتساءلين إن كنتِ ستتمكنين من كل ذلك.","لكن أرجوكِ، لا تدعي لحظة صعبة تجعلكِ تشكّين في قدراتكِ، ولا تدعي الخوف من طول الطريق ينسيكِ كم قطعتِ منه.","أنتِ لا تدرسين لتنجحي في امتحان فقط. أنتِ تبنين مستقبلكِ، وتقتربين كل يوم من حلم يستحق كل جهدكِ.","وفي يوم ما سترتدين ذلك المعطف الأبيض، وسيناديكِ الناس دكتورة، وستدركين أن شيئاً من ذلك لم يذهب سدى.","شكراً لوجودكِ، ولطفكِ، ولطريقتكِ في الكلام. ابتسامتكِ وضحكتكِ وعفويتكِ، وحتى قلقكِ وتفكيركِ الزائد. جمالكِ يتجاوز المظهر بكثير.","أنا هنا لأذكّركِ بقوتكِ حين تصعب الأمور، ولأؤمن بكِ حتى حين تجدين صعوبة في الإيمان بنفسكِ.","كوني إنسانة. تعبي، استريحي، ابكي إن احتجتِ، ثم حاولي من جديد. فقط لا تتخلي عن حلمكِ.","أتمنى أن يأتي اليوم الذي أراكِ فيه بابتسامتكِ الجميلة وأنتِ تقولين: «لقد فعلتها!»","أحب جمالكِ، لكني أحب أكثر الإنسانة التي خلفه. أُعجب بطموحكِ، وأحترم ذكاءكِ، وأشعر بالامتنان لوجودكِ في حياتي.","قد ترين نفسكِ طالبة تلهث خلف الدروس، لكني أرى طبيبة المستقبل في طريقها لتصبح كل ما حلمت به.","أحبكِ، وأسأل الله أن يعوّض كل تعبكِ بسعادة تفوق ما تتخيلين. ❤️"];
+var lang='en',ac,mon=false,mt,pi=0,ni=0,P=[[261.6,329.6,392],[220,261.6,329.6],[174.6,220,261.6],[196,246.9,392]];
+function txt(n){return lang==='ar'?SA[n]:S[n][0]}
+document.getElementById('lg').onclick=function(){lang=lang==='ar'?'en':'ar';this.textContent=lang==='ar'?'English':'عربي';if(i>=0&&i<S.length){tx.textContent=txt(i);tx.dir=lang==='ar'?'rtl':'ltr'}};
+var bus;
+function setup(){var c=ac.createConvolver(),len=Math.floor(ac.sampleRate*1.8),b=ac.createBuffer(2,len,ac.sampleRate);for(var ch=0;ch<2;ch++){var d=b.getChannelData(ch);for(var k=0;k<len;k++)d[k]=(Math.random()*2-1)*Math.pow(1-k/len,2.5)}c.buffer=b;bus=ac.createGain();bus.gain.value=.9;var w=ac.createGain();w.gain.value=.55,lp=ac.createBiquadFilter();lp.type='lowpass';lp.frequency.value=3200;bus.connect(lp);lp.connect(ac.destination);lp.connect(w);w.connect(c);c.connect(ac.destination)}
+function note(f,d,v,n){var g=ac.createGain();g.gain.setValueAtTime(0,n);g.gain.linearRampToValueAtTime(v,n+.02);g.gain.exponentialRampToValueAtTime(.0001,n+d);g.connect(bus);[[1,1],[2,.2]].forEach(function(p){var o=ac.createOscillator(),h=ac.createGain();o.frequency.value=f*p[0];h.gain.value=p[1];o.connect(h);h.connect(g);o.start(n);o.stop(n+d+.1)})}
+function pad(f,d,n){var g=ac.createGain();g.gain.setValueAtTime(0,n);g.gain.linearRampToValueAtTime(.035,n+2);g.gain.linearRampToValueAtTime(0,n+d);g.connect(bus);[-4,4].forEach(function(dt){var o=ac.createOscillator();o.type='sine';o.frequency.value=f;o.detune.value=dt;o.connect(g);o.start(n);o.stop(n+d)})}
+var CH=[{b:110,t:[220,261.63,329.63,440],m:[659.25,523.25,440]},{b:87.31,t:[174.61,220,261.63,349.23],m:[698.46,523.25,440]},{b:130.81,t:[261.63,329.63,392,523.25],m:[783.99,659.25,523.25]},{b:98,t:[196,246.94,293.66,392],m:[587.33,493.88,783.99]}],step=0;
+var nt=0;
+function mus(){if(!mon)return;while(nt<ac.currentTime+1.5){sch(nt);nt+=.52}mt=setTimeout(mus,200)}
+function sch(n){var k=step%8,bar=Math.floor(step/8),c=CH[bar%4],v=Math.floor(bar/4)%3,p=Math.min(1,(i+1)/S.length);if(k===0){pad(c.b*2,4.6,n);if(p>.5)pad(c.b*4,4.6,n);note(c.b,4.2,.15,n)}note(c.t[[0,1,2,3,2,1,2,3][k]],2.2,.06+.05*p,n);if(k===0||k===4){note(c.m[(v+(k?1:0))%3],3.4,.05+.07*p,n)}if(i>=13&&k%2)note(c.t[3]*2,2,.03,n);step++}
+function mtog(){try{if(!ac)ac=new (window.AudioContext||window.webkitAudioContext)();if(!bus)setup();mon=!mon;if(mon){ac.resume();nt=ac.currentTime+.15;mus()}else clearTimeout(mt);document.getElementById('mu').textContent='♪ Music: '+(mon?'on':'off')}catch(e){}}
+document.getElementById('mu').onclick=mtog;
+var i=-1,t=null,paused=true,started=false,tx=document.getElementById('text'),bar=document.getElementById('bar'),hint=document.getElementById('hint'),stage=document.getElementById('stage');
+function heart(){var e=document.createElement('div');e.className='h';e.textContent='♥';e.style.left=Math.random()*100+'%';e.style.fontSize=(12+Math.random()*22)+'px';e.style.animationDuration=(7+Math.random()*6)+'s';document.body.appendChild(e);setTimeout(function(){e.remove()},13000)}
+setInterval(function(){if(!paused)heart()},900);
+function show(n){
+  clearTimeout(t);i=n;
+  if(i>=S.length){end();return}
+  tx.classList.remove('on');
+  setTimeout(function(){
+    tx.className=S[i][1]?'big':'';tx.textContent=txt(i);tx.dir=lang==='ar'?'rtl':'ltr';
+    void tx.offsetWidth;tx.classList.add('on');
+    bar.style.width=((i+1)/S.length*100)+'%';bub.textContent=L[i];bub.classList.add('on');
+    if(!paused)t=setTimeout(function(){show(i+1)},3800+S[i][0].length*55);
+  },i<0?0:700);
+}
+function end(){
+  paused=true;tx.className='';tx.textContent='';bub.classList.remove('on');
+  hint.innerHTML='<button id="re">Replay ↺</button>';
+  document.getElementById('re').onclick=function(e){e.stopPropagation();start()};
+}
+function start(){paused=false;started=true;if(!mon)mtog();hint.textContent='Tap to pause';show(0)}
+stage.onclick=function(){
+  if(!started){start();return}
+  if(i>=S.length)return;
+  if(paused){paused=false;hint.textContent='Tap to pause';t=setTimeout(function(){show(i+1)},1200)}
+  else{paused=true;clearTimeout(t);hint.textContent='Paused · tap to continue'}
+};
+</script>
+</body>
+</html>
